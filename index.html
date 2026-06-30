@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Dashboard Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dash-card">
+        <header class="dash-header">
+            <div class="status-dot"></div>
+            <h2>Módulo de Criptografia</h2>
+        </header>
+
+        <div class="dash-display">
+            <input type="text" id="dash-input-senha" readonly value="..." placeholder="Aguardando parâmetros...">
+        </div>
+
+        <div class="dash-body">
+            <div class="dash-row">
+                <span class="dash-label">Comprimento da Chave</span>
+                <div class="dash-stepper">
+                    <button id="dash-btn-menos" class="btn-step">-</button>
+                    <span id="dash-txt-comprimento">12</span>
+                    <button id="dash-btn-mais" class="btn-step">+</button>
+                </div>
+            </div>
+
+            <div class="dash-divider"></div>
+
+            <div class="dash-grid-filtros">
+                <label class="dash-checkbox">
+                    <input type="checkbox" id="dash-chk-alta" checked>
+                    <span class="custom-box"></span>
+                    Letras Maiúsculas
+                </label>
+                <label class="dash-checkbox">
+                    <input type="checkbox" id="dash-chk-baixa" checked>
+                    <span class="custom-box"></span>
+                    Letras Minúsculas
+                </label>
+                <label class="dash-checkbox">
+                    <input type="checkbox" id="dash-chk-num">
+                    <span class="custom-box"></span>
+                    Algarismos (0-9)
+                </label>
+                <label class="dash-checkbox">
+                    <input type="checkbox" id="dash-chk-simb">
+                    <span class="custom-box"></span>
+                    Caracteres Especiais
+                </label>
+            </div>
+
+            <div class="dash-diagnostico" id="dash-status-box">
+                <div class="diagnostico-header">
+                    <span>Resistência Estimada:</span>
+                    <strong id="dash-txt-nivel">ANALISANDO</strong>
+                </div>
+                <p id="dash-txt-info">Defina as diretrizes para o cálculo.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
